@@ -28,7 +28,7 @@
 
         "tensorboard_dir":      "logs",
         "saved_weights_name":   "birds.h5",
-        "debug":                true
+        "debug":                false
     },
 
     "valid": {
