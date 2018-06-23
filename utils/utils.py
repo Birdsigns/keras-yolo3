@@ -45,7 +45,10 @@ def evaluate(model,
         raw_image = [generator.load_image(i)]
 
         # make the boxes and the labels
-        pred_boxes = get_yolo_boxes(model, raw_image, net_h, net_w, generator.get_anchors(), obj_thresh, nms_thresh)[0]
+        try:
+            pred_boxes = get_yolo_boxes(model, raw_image, net_h, net_w, generator.get_anchors(), obj_thresh, nms_thresh)[0]
+        except:
+            continue
 
         score = np.array([box.get_score() for box in pred_boxes])
         pred_labels = np.array([box.label for box in pred_boxes])        
