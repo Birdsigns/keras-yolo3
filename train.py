@@ -66,7 +66,7 @@ def create_callbacks(saved_weights_name, tensorboard_logs, model_to_save):
     makedirs(tensorboard_logs)
     
     early_stop = EarlyStopping(
-        monitor     = 'loss', 
+        monitor     = 'val_loss',
         min_delta   = 0.01, 
         patience    = 5, 
         mode        = 'min', 
@@ -82,7 +82,7 @@ def create_callbacks(saved_weights_name, tensorboard_logs, model_to_save):
         period          = 1
     )
     reduce_on_plateau = ReduceLROnPlateau(
-        monitor  = 'loss',
+        monitor  = 'val_loss',
         factor   = 0.1,
         patience = 2,
         verbose  = 1,
