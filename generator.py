@@ -70,7 +70,10 @@ class BatchGenerator(Sequence):
         # do the logic to fill in the inputs and the output
         for train_instance in self.instances[l_bound:r_bound]:
             # augment input image and fix object's position and size
-            img, all_objs = self._aug_image(train_instance, net_h, net_w)
+            try:
+                img, all_objs = self._aug_image(train_instance, net_h, net_w)
+            except:
+                continue
             
             for obj in all_objs:
                 # find the best anchor box for this object
@@ -151,7 +154,7 @@ class BatchGenerator(Sequence):
         if idx%10 == 0:
             net_size = self.downsample*np.random.randint(self.min_net_size/self.downsample, \
                                                          self.max_net_size/self.downsample+1)
-            print("resizing: ", net_size, net_size)
+            #print("resizing: ", net_size, net_size)
             self.net_h, self.net_w = net_size, net_size
         return self.net_h, self.net_w
     
