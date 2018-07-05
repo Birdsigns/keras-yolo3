@@ -2,18 +2,18 @@
     "model" : {
         "min_input_size":       288,
         "max_input_size":       448,
-        "anchors":              [68,96, 83,179, 107,282, 146,128, 151,236, 197,317, 208,184, 281,225, 311,323],
-        "labels":               ["blue_jay", "hooded_crow", "mourning_dove", "northern_cardinal_female",
-                                 "northern_cardinal_male"]
+        "anchors":              [72,97, 83,182, 117,277, 145,134, 173,215, 192,318, 249,171, 281,251, 307,337],
+        "labels":               ["blue_jay", "hooded_crow", "house_sparrow", "mourning_dove", "northern_cardinal_female",
+                                 "northern_cardinal_male", "red_winged_blackbird_male"]
     },
 
     "train": {
-        "train_image_folder":   "/Users/mexxik/GoogleDrive/v6/images/",
-        "train_annot_folder":   "/Users/mexxik/GoogleDrive/v6/annotations/",
+        "train_image_folder":   "/home/max/birds_data/v6/images/",
+        "train_annot_folder":   "/home/max/birds_data/v6/annotations/",
         "cache_name":           "birds_train.pkl",
 
-        "train_times":          8,
-        "batch_size":           1,
+        "train_times":          1,
+        "batch_size":           6,
         "learning_rate":        1e-4,
         "nb_epochs":            100,
         "warmup_epochs":        3,
