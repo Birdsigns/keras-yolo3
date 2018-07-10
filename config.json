@@ -3,13 +3,13 @@
         "min_input_size":       288,
         "max_input_size":       448,
         "anchors":              [72,97, 83,182, 117,277, 145,134, 173,215, 192,318, 249,171, 281,251, 307,337],
-        "labels":               ["blue_jay", "hooded_crow", "house_sparrow", "mourning_dove", "northern_cardinal_female",
-                                 "northern_cardinal_male", "red_winged_blackbird_male"]
+        "labels":               ["blue_jay", "hooded_crow", "mourning_dove", "northern_cardinal_female",
+                                 "northern_cardinal_male"]
     },
 
     "train": {
-        "train_image_folder":   "/home/max/birds_data/v6/images/",
-        "train_annot_folder":   "/home/max/birds_data/v6/annotations/",
+        "train_image_folder":   "/home/max/birds_data/v7/images/",
+        "train_annot_folder":   "/home/max/birds_data/v7/annotations/",
         "cache_name":           "birds_train.pkl",
 
         "train_times":          1,
