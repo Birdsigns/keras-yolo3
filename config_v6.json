@@ -1,0 +1,43 @@
+
+{
+    "model" : {
+        "min_input_size":       288,
+        "max_input_size":       448,
+        "anchors":              [62,101, 87,185, 116,287, 121,110, 166,227, 176,151, 202,318, 263,208, 310,309],
+        "labels":               ["blue_jay", "hooded_crow", "house_sparrow", "mourning_dove",
+                                 "northern_cardinal_female", "northern_cardinal_male", "red_winged_blackbird_male"
+        ]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/ubuntu/data/v6/images/",
+        "train_annot_folder":   "/home/ubuntu/data/v6/annotations/",
+        "cache_name":           "yolo_v6_01.pkl",
+
+        "train_times":          8,
+        "batch_size":           16,
+        "learning_rate":        1e-4,
+        "nb_epochs":            200,
+        "warmup_epochs":        3,
+        "ignore_thresh":        0.5,
+        "gpus":                 "0",
+
+        "grid_scales":          [1,1,1],
+        "obj_scale":            5,
+        "noobj_scale":          1,
+        "xywh_scale":           1,
+        "class_scale":          1,
+
+        "tensorboard_dir":      "logs",
+        "saved_weights_name":   "yolo_v6.h5",
+        "debug":                false
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+        "cache_name":           "",
+
+        "valid_times":          1
+    }
+}
