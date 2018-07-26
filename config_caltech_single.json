@@ -1,0 +1,40 @@
+{
+    "model" : {
+        "min_input_size":       288,
+        "max_input_size":       448,
+        "anchors":              [118,207, 143,296, 154,143, 197,219, 211,306, 262,170, 274,325, 296,242, 353,340],
+        "labels":               ["bird"]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/mexxik/data/v9/images/",
+        "train_annot_folder":   "/home/mexxik/data/v9/annotations/",
+        "cache_name":           "birds_train_caltech_single.pkl",
+
+        "train_times":          8,
+        "batch_size":           16,
+        "learning_rate":        1e-4,
+        "nb_epochs":            100,
+        "warmup_epochs":        3,
+        "ignore_thresh":        0.5,
+        "gpus":                 "0",
+
+        "grid_scales":          [1,1,1],
+        "obj_scale":            5,
+        "noobj_scale":          1,
+        "xywh_scale":           1,
+        "class_scale":          1,
+
+        "tensorboard_dir":      "logs",
+        "saved_weights_name":   "birds_caltech_single.h5",
+        "debug":                false
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+        "cache_name":           "",
+
+        "valid_times":          1
+    }
+}
