@@ -12,7 +12,7 @@
         "cache_name":           "birds_train_caltech_single.pkl",
 
         "train_times":          8,
-        "batch_size":           16,
+        "batch_size":           8,
         "learning_rate":        1e-4,
         "nb_epochs":            100,
         "warmup_epochs":        3,
