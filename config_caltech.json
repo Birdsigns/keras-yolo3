@@ -1,0 +1,81 @@
+{
+    "model" : {
+        "min_input_size":       288,
+        "max_input_size":       448,
+        "anchors":              [118,163, 133,294, 167,218, 193,147, 225,243, 225,327, 281,187, 308,268, 337,351],
+        "labels":               [
+            "shiny_cowbird", "black_billed_cuckoo", "white_breasted_nuthatch", "green_kingfisher",
+            "ruby_throated_hummingbird", "baltimore_oriole", "red_breasted_merganser", "geococcyx", "rhinoceros_auklet",
+            "bewick_wren", "groove_billed_ani", "chuck_will_widow", "gray_crowned_rosy_finch", "orchard_oriole",
+            "elegant_tern", "forsters_tern", "fish_crow", "horned_lark", "winter_wren", "northern_flicker",
+            "eared_grebe", "downy_woodpecker", "parakeet_auklet", "lazuli_bunting", "american_three_toed_woodpecker",
+            "rufous_hummingbird", "green_jay", "yellow_bellied_flycatcher", "cardinal", "common_yellowthroat",
+            "brown_thrasher", "yellow_breasted_chat", "cape_may_warbler", "worm_eating_warbler", "crested_auklet",
+            "sayornis", "brewer_sparrow", "gray_kingbird", "prairie_warbler", "rock_wren", "california_gull",
+            "western_grebe", "nighthawk", "brewer_blackbird", "pied_kingfisher", "scarlet_tanager", "tree_swallow",
+            "american_goldfinch", "spotted_catbird", "loggerhead_shrike", "white_eyed_vireo", "pacific_loon",
+            "clay_colored_sparrow", "sooty_albatross", "slaty_backed_gull", "black_throated_sparrow",
+            "philadelphia_vireo", "boat_tailed_grackle", "scissor_tailed_flycatcher", "laysan_albatross",
+            "american_crow", "clark_nutcracker", "ivory_gull", "bobolink", "brown_creeper", "western_meadowlark",
+            "red_bellied_woodpecker", "song_sparrow", "white_crowned_sparrow", "orange_crowned_warbler",
+            "bay_breasted_warbler", "hooded_oriole", "louisiana_waterthrush", "gadwall", "ovenbird",
+            "pied_billed_grebe", "blue_grosbeak", "herring_gull", "house_wren", "wilson_warbler", "pine_grosbeak",
+            "belted_kingfisher", "cape_glossy_starling", "blue_headed_vireo", "indigo_bunting", "painted_bunting",
+            "vesper_sparrow", "baird_sparrow", "vermilion_flycatcher", "florida_jay", "nelson_sharp_tailed_sparrow",
+            "eastern_towhee", "green_tailed_towhee", "carolina_wren", "yellow_headed_blackbird",
+            "great_crested_flycatcher", "nashville_warbler", "cerulean_warbler", "sage_thrasher", "barn_swallow",
+            "golden_winged_warbler", "red_cockaded_woodpecker", "tropical_kingbird", "purple_finch", "common_tern",
+            "mockingbird", "brown_pelican", "american_redstart", "mourning_warbler", "artic_tern", "tree_sparrow",
+            "yellow_billed_cuckoo", "magnolia_warbler", "pelagic_cormorant", "chestnut_sided_warbler",
+            "green_violetear", "white_throated_sparrow", "henslow_sparrow", "summer_tanager", "acadian_flycatcher",
+            "chipping_sparrow", "cactus_wren", "marsh_wren", "canada_warbler", "heermann_gull", "myrtle_warbler",
+            "fox_sparrow", "house_sparrow", "bank_swallow", "glaucous_winged_gull", "common_raven",
+            "red_winged_blackbird", "hooded_warbler", "palm_warbler", "northern_waterthrush",
+            "white_breasted_kingfisher", "swainson_warbler", "yellow_warbler", "ring_billed_gull", "brandt_cormorant",
+            "bronzed_cowbird", "white_necked_raven", "black_tern", "harris_sparrow", "black_capped_vireo", "mallard",
+            "gray_catbird", "white_pelican", "evening_grosbeak", "olive_sided_flycatcher", "blue_winged_warbler",
+            "tennessee_warbler", "mangrove_cuckoo", "anna_hummingbird", "warbling_vireo", "western_gull", "blue_jay",
+            "black_and_white_warbler", "le_conte_sparrow", "pileated_woodpecker", "kentucky_warbler",
+            "lincoln_sparrow", "bohemian_waxwing", "american_pipit", "pine_warbler", "least_auklet",
+            "red_legged_kittiwake", "red_faced_cormorant", "grasshopper_sparrow", "red_headed_woodpecker",
+            "european_goldfinch", "ringed_kingfisher", "red_eyed_vireo", "cliff_swallow", "least_flycatcher",
+            "field_sparrow", "rose_breasted_grosbeak", "dark_eyed_junco", "long_tailed_jaeger", "least_tern",
+            "yellow_throated_vireo", "northern_fulmar", "hooded_merganser", "horned_puffin", "frigatebird",
+            "prothonotary_warbler", "cedar_waxwing", "black_throated_blue_warbler", "savannah_sparrow",
+            "whip_poor_will", "pigeon_guillemot", "pomarine_jaeger", "black_footed_albatross", "western_wood_pewee",
+            "scott_oriole", "horned_grebe", "rusty_blackbird", "great_grey_shrike", "seaside_sparrow", "caspian_tern"
+        ]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/ubuntu/data/v8/images/",
+        "train_annot_folder":   "/home/ubuntu/data/v8/annotations/",
+        "cache_name":           "birds_train_caltech.pkl",
+
+        "train_times":          8,
+        "batch_size":           16,
+        "learning_rate":        1e-4,
+        "nb_epochs":            100,
+        "warmup_epochs":        3,
+        "ignore_thresh":        0.5,
+        "gpus":                 "0",
+
+        "grid_scales":          [1,1,1],
+        "obj_scale":            5,
+        "noobj_scale":          1,
+        "xywh_scale":           1,
+        "class_scale":          1,
+
+        "tensorboard_dir":      "logs",
+        "saved_weights_name":   "birds_caltech.h5",
+        "debug":                false
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+        "cache_name":           "",
+
+        "valid_times":          1
+    }
+}
