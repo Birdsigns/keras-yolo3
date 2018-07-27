@@ -8,8 +8,8 @@
     },
 
     "train": {
-        "train_image_folder":   "/home/mexxik/data/v9/images/",
-        "train_annot_folder":   "/home/mexxik/data/v9/annotations/",
+        "train_image_folder":   "/home/ubuntu/data/v9/images/",
+        "train_annot_folder":   "/home/ubuntu/data/v9/annotations/",
         "cache_name":           "birds_train_caltech_single_scratch.pkl",
         "use_backend":          false,
 
