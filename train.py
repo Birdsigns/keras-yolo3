@@ -112,7 +112,8 @@ def create_model(
     obj_scale,
     noobj_scale,
     xywh_scale,
-    class_scale  
+    class_scale,
+    use_backend
 ):
     if multi_gpu > 1:
         with tf.device('/cpu:0'):
@@ -147,11 +148,12 @@ def create_model(
         )  
 
     # load the pretrained weight if exists, otherwise load the backend weight only
+
     if os.path.exists(saved_weights_name): 
         print("\nLoading pretrained weights.\n")
         template_model.load_weights(saved_weights_name)
     else:
-        if os.path.exists("backend.h5"):
+        if os.path.exists("backend.h5") and use_backend:
             template_model.load_weights("backend.h5", by_name=True)
 
     if multi_gpu > 1:
@@ -227,7 +229,7 @@ def _main_(args):
 
     train_model, infer_model = create_model(
         nb_class            = len(labels), 
-        anchors             = config['model']['anchors'], 
+        anchors             = config['model']['anchors'],
         max_box_per_image   = max_box_per_image, 
         max_grid            = [config['model']['max_input_size'], config['model']['max_input_size']], 
         batch_size          = config['train']['batch_size'], 
@@ -241,6 +243,7 @@ def _main_(args):
         noobj_scale         = config['train']['noobj_scale'],
         xywh_scale          = config['train']['xywh_scale'],
         class_scale         = config['train']['class_scale'],
+        use_backend         = config['train']['use_backend']
     )
 
     ###############################

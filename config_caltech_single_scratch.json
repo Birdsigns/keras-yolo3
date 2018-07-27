@@ -3,22 +3,20 @@
     "model" : {
         "min_input_size":       288,
         "max_input_size":       448,
-        "anchors":              [62,101, 87,185, 116,287, 121,110, 166,227, 176,151, 202,318, 263,208, 310,309],
-        "labels":               ["blue_jay", "hooded_crow", "house_sparrow", "mourning_dove",
-                                 "northern_cardinal_female", "northern_cardinal_male", "red_winged_blackbird_male"
-        ]
+        "anchors":              [118,207, 143,296, 154,143, 197,219, 211,306, 262,170, 274,325, 296,242, 353,340],
+        "labels":               ["bird"]
     },
 
     "train": {
-        "train_image_folder":   "/home/ubuntu/data/v6/images/",
-        "train_annot_folder":   "/home/ubuntu/data/v6/annotations/",
-        "cache_name":           "yolo_v6_01.pkl",
-
+        "train_image_folder":   "/home/mexxik/data/v9/images/",
+        "train_annot_folder":   "/home/mexxik/data/v9/annotations/",
+        "cache_name":           "birds_train_caltech_single_scratch.pkl",
+        "use_backend":          false,
 
         "train_times":          8,
         "batch_size":           16,
         "learning_rate":        1e-4,
-        "nb_epochs":            200,
+        "nb_epochs":            100,
         "warmup_epochs":        3,
         "ignore_thresh":        0.5,
         "gpus":                 "0",
@@ -30,7 +28,7 @@
         "class_scale":          1,
 
         "tensorboard_dir":      "logs",
-        "saved_weights_name":   "yolo_v6.h5",
+        "saved_weights_name":   "birds_caltech_single_scratch.h5",
         "debug":                false
     },
 
