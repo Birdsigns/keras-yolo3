@@ -11,6 +11,7 @@
         "train_image_folder":   "/home/max/birds_data/v7/images/",
         "train_annot_folder":   "/home/max/birds_data/v7/annotations/",
         "cache_name":           "birds_train.pkl",
+        "use_backend":          true,
 
         "train_times":          1,
         "batch_size":           6,
