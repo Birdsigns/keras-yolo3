@@ -18,7 +18,7 @@
     "train": {
         "train_image_folder":   "/home/ubuntu/data/v10/images/",
         "train_annot_folder":   "/home/ubuntu/data/v10/annotations/",
-        "cache_name":           "birds_train.pkl",
+        "cache_name":           "birds_train_v10.pkl",
         "use_backend":          true,
 
         "train_times":          8,
@@ -36,7 +36,7 @@
         "class_scale":          1,
 
         "tensorboard_dir":      "logs",
-        "saved_weights_name":   "birds.h5",
+        "saved_weights_name":   "birds_v10.h5",
         "debug":                false
     },
 
