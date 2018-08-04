@@ -1,0 +1,50 @@
+{
+    "model" : {
+        "min_input_size":       288,
+        "max_input_size":       448,
+        "anchors":              [66,90, 83,160, 103,250, 144,125, 148,302, 168,194, 216,299, 258,201, 313,310],
+        "labels":               ["american_crow", "american_goldfinch", "american_robin", "american_tree_sparrow",
+                                 "blue_jay", "brown_headed_cowbird_female", "brown_headed_cowbird_male",
+                                 "carolina_wren", "common_grackle", "coopers_hawk", "dark_eyed_junco",
+                                 "downy_woodpecker", "european_starling", "great_tit", "grey_catbird",
+                                 "hairy_woodpecker", "hooded_crow", "house_finch_female", "house_finch_male",
+                                 "house_sparrow", "mourning_dove", "northern_cardinal_female", "northern_cardinal_male",
+                                 "pileated_woodpecker", "red_bellied_woodpecker", "red_breasted_nuthatch",
+                                 "red_winged_blackbird_male", "red_winged_blackbird_female", "song_sparrow",
+                                 "tufted_titmouse", "white_breasted_nuthatch", "white_throated_sparrow"
+        ]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/ubuntu/data/v10/images/",
+        "train_annot_folder":   "/home/ubuntu/data/v10/annotations/",
+        "cache_name":           "birds_train.pkl",
+        "use_backend":          true,
+
+        "train_times":          8,
+        "batch_size":           16,
+        "learning_rate":        1e-4,
+        "nb_epochs":            100,
+        "warmup_epochs":        3,
+        "ignore_thresh":        0.5,
+        "gpus":                 "0",
+
+        "grid_scales":          [1,1,1],
+        "obj_scale":            5,
+        "noobj_scale":          1,
+        "xywh_scale":           1,
+        "class_scale":          1,
+
+        "tensorboard_dir":      "logs",
+        "saved_weights_name":   "birds.h5",
+        "debug":                false
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+        "cache_name":           "",
+
+        "valid_times":          1
+    }
+}
