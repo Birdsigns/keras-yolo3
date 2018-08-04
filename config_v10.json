@@ -2,7 +2,7 @@
     "model" : {
         "min_input_size":       288,
         "max_input_size":       448,
-        "anchors":              [66,90, 83,160, 103,250, 144,125, 148,302, 168,194, 216,299, 258,201, 313,310],
+        "anchors":              [87,229, 108,136, 123,300, 153,205, 179,289, 208,158, 236,319, 263,224, 323,311],
         "labels":               ["american_crow", "american_goldfinch", "american_robin", "american_tree_sparrow",
                                  "blue_jay", "brown_headed_cowbird_female", "brown_headed_cowbird_male",
                                  "carolina_wren", "common_grackle", "coopers_hawk", "dark_eyed_junco",
