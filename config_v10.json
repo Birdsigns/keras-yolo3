@@ -2,23 +2,24 @@
     "model" : {
         "min_input_size":       288,
         "max_input_size":       448,
-        "anchors":              [87,229, 108,136, 123,300, 153,205, 179,289, 208,158, 236,319, 263,224, 323,311],
-        "labels":               ["american_crow", "american_goldfinch", "american_robin", "american_tree_sparrow",
-                                 "blue_jay", "brown_headed_cowbird_female", "brown_headed_cowbird_male",
-                                 "carolina_wren", "common_grackle", "coopers_hawk", "dark_eyed_junco",
-                                 "downy_woodpecker", "european_starling", "great_tit", "grey_catbird",
-                                 "hairy_woodpecker", "hooded_crow", "house_finch_female", "house_finch_male",
-                                 "house_sparrow", "mourning_dove", "northern_cardinal_female", "northern_cardinal_male",
-                                 "pileated_woodpecker", "red_bellied_woodpecker", "red_breasted_nuthatch",
-                                 "red_winged_blackbird_male", "red_winged_blackbird_female", "song_sparrow",
-                                 "tufted_titmouse", "white_breasted_nuthatch", "white_throated_sparrow"
+        "anchors":              [86,119, 98,197, 109,285, 160,316, 170,142, 177,218, 231,307, 270,208, 323,321],
+        "labels":               [
+            "american_crow", "american_goldfinch", "american_robin", "american_tree_sparrow",
+            "black_capped_chickadee", "blue_jay", "brown_headed_cowbird_female",
+            "brown_headed_cowbird_male", "carolina_wren", "common_grackle", "dark_eyed_junco",
+            "downy_woodpecker", "european_starling", "great_tit", "grey_catbird",
+            "hairy_woodpecker", "hooded_crow", "house_finch_female", "house_finch_male",
+            "house_sparrow", "mourning_dove", "northern_cardinal_female", "northern_cardinal_male",
+            "pileated_woodpecker", "red_bellied_woodpecker", "red_breasted_nuthatch",
+            "red_winged_blackbird_female", "red_winged_blackbird_male", "song_sparrow", "squirrel",
+            "tufted_titmouse", "white_breasted_nuthatch", "white_throated_sparrow"
         ]
     },
 
     "train": {
-        "train_image_folder":   "/home/ubuntu/data/v10/images/",
-        "train_annot_folder":   "/home/ubuntu/data/v10/annotations/",
-        "cache_name":           "birds_train_v10.pkl",
+        "train_image_folder":   "/Users/mexxik/GoogleDrive/v10/images/",
+        "train_annot_folder":   "/Users/mexxik/GoogleDrive/v10/annotations/",
+        "cache_name":           "birds_train_v10_04.pkl",
         "use_backend":          true,
 
         "train_times":          8,
@@ -27,7 +28,7 @@
         "nb_epochs":            100,
         "warmup_epochs":        3,
         "ignore_thresh":        0.5,
-        "gpus":                 "0",
+        "gpus":                 "0,1,2,3,4,5,6,7",
 
         "grid_scales":          [1,1,1],
         "obj_scale":            5,
@@ -36,7 +37,7 @@
         "class_scale":          1,
 
         "tensorboard_dir":      "logs",
-        "saved_weights_name":   "birds_v10.h5",
+        "saved_weights_name":   "birds_v10_04.h5",
         "debug":                false
     },
 
