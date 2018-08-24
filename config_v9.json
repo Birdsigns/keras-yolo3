@@ -10,7 +10,7 @@
 
     "train": {
         "train_image_folder":   "/home/ubuntu/data/v9/images/",
-        "train_annot_folder":   "/home/ubuntu/data/v/annotations/",
+        "train_annot_folder":   "/home/ubuntu/data/v9/annotations/",
         "cache_name":           "birds_train_v9_02.pkl",
         "use_backend":          true,
 
